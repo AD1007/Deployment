@@ -41,7 +41,6 @@ def load_model():
         use_auth_token="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"
     )
     return model, tokenizer
-return model, tokenizer
 
 # ===========================
 # RAG: Setup VectorStore
