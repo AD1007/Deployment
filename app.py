@@ -32,7 +32,7 @@ LLM_MODEL_ID = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 # ===========================
 @st.cache_data
 def load_model():
-    tokenizer = AutoTokenizer.from_pretrained(LLM_MODEL_ID, use_auth_token="your_huggingface_token")
+    tokenizer = AutoTokenizer.from_pretrained(LLM_MODEL_ID, use_auth_token="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")
     tokenizer.pad_token = tokenizer.eos_token
     model = AutoModelForCausalLM.from_pretrained(
         LLM_MODEL_ID,
