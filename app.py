@@ -30,17 +30,18 @@ LLM_MODEL_ID = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 # ===========================
 # LOAD LLM
 # ===========================
-@st.cache_resource
+@st.cache_data
 def load_model():
-    tokenizer = AutoTokenizer.from_pretrained(LLM_MODEL_ID, use_auth_token=True)
+    tokenizer = AutoTokenizer.from_pretrained(LLM_MODEL_ID, use_auth_token="your_huggingface_token")
     tokenizer.pad_token = tokenizer.eos_token
     model = AutoModelForCausalLM.from_pretrained(
         LLM_MODEL_ID,
         torch_dtype=torch.float32,
         device_map="auto",
-        use_auth_token=True
+        use_auth_token="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"
     )
     return model, tokenizer
+return model, tokenizer
 
 # ===========================
 # RAG: Setup VectorStore
