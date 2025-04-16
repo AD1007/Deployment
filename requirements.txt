@@ -1,6 +1,6 @@
 streamlit
 langchain==0.0.152  # Specify the correct version of LangChain for compatibility
-torch
-transformers
 sentence-transformers
 chromadb
+transformers==4.30.0  # Make sure you are using a compatible version
+torch==2.0.1  # Latest version of PyTorch
